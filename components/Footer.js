@@ -128,12 +128,6 @@ export class Footer extends LitElement {
   `;
 
   render() {
-    const icon_lists_var = this.icon_lists?.map(icon =>{
-      return ({
-      ...icon,
-      callback_fn: icon.callback_fn.bind(this),
-    })
-  });
 
     return html`
       <div class="footer-container">
@@ -143,13 +137,13 @@ export class Footer extends LitElement {
             <div class="footer-description">${this.description}</div>
           </div>
           <div class="social-block">
-            ${icon_lists_var.map((icon) => {
+            ${this.icon_lists.map((icon) => {
               return html`
                 <mg-fa-icon
                   class="social-icon"
                   .icon_name=${icon?.icon_name}
                   .icon_variant=${icon?.icon_variant}
-                  @click=${e=> icon?.callback_fn(e)}
+                  @click=${icon?.callback_fn}
                 ></mg-fa-icon>
               `;
             })}

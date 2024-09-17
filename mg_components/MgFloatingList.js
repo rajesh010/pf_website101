@@ -20,12 +20,6 @@ export class MgFloatingList extends LitElement {
             --floating-list-padding: var(--primary-padding, 10px);  /* Default padding */
             --floating-list-width: var(--list-container-width, 200px);  /* Default width */
 
-            display: flex;
-            /* here would be chance to put anywhere .... left (ltr) being the default */
-            justify-content: flex-start;
-            z-index: 999;
-            padding-right: 0.8em;
-            background-color:red;
         }
 
         .floating-list-container {
@@ -38,6 +32,12 @@ export class MgFloatingList extends LitElement {
             border-radius: 5px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             overflow: hidden;
+            position:fixed;
+            z-index: 999;
+            right:15px;
+            /* left:0px; */
+
+
         }
 
         .floating-list-item {

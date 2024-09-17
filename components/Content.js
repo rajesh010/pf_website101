@@ -49,7 +49,7 @@ export class Content extends LitElement {
 
         .name-block, .desc {
             margin: 15px;
-            width: 35vw;
+            max-width: 70vw;
             text-align: center;
             font-family: var(--heading-font-family);
         }

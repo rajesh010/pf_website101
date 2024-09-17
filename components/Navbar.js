@@ -17,6 +17,8 @@ export class Navbar extends LitElement {
             brand_img: { type: String },
             // just to have e.target.value; since its standard
             value: { type: String },
+
+            icon_name: { type: String },
         };
     }
     
@@ -149,7 +151,7 @@ export class Navbar extends LitElement {
                 <div class="mobile-menu-icon">
                 <mg-fa-icon 
                     @click=${() => this.dispatchEvent(new CustomEvent("side-icon-click", { bubbles: true, composed: true }))}
-                    .icon_name=${"bars"} .icon_variant=${"solid"} >
+                    .icon_name=${this.icon_name || "bars"} .icon_variant=${"solid"} >
                 </mg-fa-icon>
             </div>
             </div>

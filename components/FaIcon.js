@@ -75,11 +75,11 @@ export class FaIcon extends LitElement {
         if (!this.icon_name) return html``;
 
         return html`
-            <!-- <style>
-                @import url('/librarys/fontawesome/fontawesome-free-6.5.2-web/fontawesome-free-6.5.2-web/css/fontawesome.css');
-                @import url('/librarys/fontawesome/fontawesome-free-6.5.2-web/fontawesome-free-6.5.2-web/css/brands.css');
-                @import url('/librarys/fontawesome/fontawesome-free-6.5.2-web/fontawesome-free-6.5.2-web/css/solid.css');
-            </style> -->
+            <style>
+                @import url('./librarys/fontawesome/fontawesome-free-6.5.2-web/fontawesome-free-6.5.2-web/css/fontawesome.css');
+                @import url('./librarys/fontawesome/fontawesome-free-6.5.2-web/fontawesome-free-6.5.2-web/css/brands.css');
+                @import url('./librarys/fontawesome/fontawesome-free-6.5.2-web/fontawesome-free-6.5.2-web/css/solid.css');
+            </style>
             <div class="icon-container">
                 <i class="${this.icon_variant} ${this.icon_name}"></i>
             </div>
