@@ -154,7 +154,7 @@ class MyElement extends LitElement {
                     .scroll_into_view = ${this.scroll_into_view}
                     @contact-clicked = ${(e) =>
                       (this.scroll_into_view = "contact")}
-                    @view-resume = ${(e) => (location.href = "/resume.pdf")}
+                    @view-resume = ${(e) => window.open("/pf_website101/resume.pdf", "_blank")}
                 >
                 </mg-content>
 
